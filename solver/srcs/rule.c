@@ -8,9 +8,9 @@ int rule_horizontal(int map[9][9])
         {
             if (map[i][j] != 0)
             {
-                for (int k = 0; k < 9; k++)
+                for (int k = j + 1; k < 9; k++)
                 {
-                    if (k != j && map[i][j] == map[i][k])
+                    if (map[i][j] == map[i][k])
                     {
                         return (0);
                     }
@@ -29,9 +29,9 @@ int rule_vertical(int map[9][9])
         {
             if (map[j][j] != 0)
             {
-                for (int k = 0; k < 9; k++)
+                for (int k = j + 1; k < 9; k++)
                 {
-                    if (k != j && map[j][i] == map[k][i])
+                    if (map[j][i] == map[k][i])
                     {
                         return (0);
                     }
